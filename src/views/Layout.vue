@@ -38,8 +38,8 @@
                 show-if-above
                 bordered
                 class="bg-grey-2"
-                :width="280"
-        >
+                :width="320">
+
             <q-scroll-area class="fit">
                 <q-list padding>
                     <q-item v-for="link in menu" :key="link.text" v-ripple clickable>
@@ -54,6 +54,26 @@
                     </q-item>
 
                     <q-separator class="q-my-md"/>
+
+                    <q-card flat bordered class="q-ma-md">
+                        <q-card-section>
+                            <div class="text-h6">评分细则</div>
+                        </q-card-section>
+
+                        <q-card-section class="q-pt-none">
+                            <b>测试环境</b>
+                            <br>
+                            网络: 中国联通300M
+                            <br>
+                            设备: 标准办公台式机
+                        </q-card-section>
+
+                        <q-separator inset/>
+
+                        <q-card-section>
+                            评级来自于我的片面与刻薄
+                        </q-card-section>
+                    </q-card>
 
                     <q-card dark bordered class="bg-grey-9 q-ma-md">
                         <q-card-section>
@@ -107,7 +127,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .YX
   &__toolbar-input-container
     min-width: 100px
