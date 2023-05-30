@@ -1,34 +1,17 @@
 <template>
-    <q-banner inline-actions class="bg-orange text-white">
-        注意保护个人隐私，不要相信网站中的任何赌博，借贷广告。<b>谨防诈骗，远离赌毒 !!!</b>
+    <q-banner inline-actions class="bg-green text-white">
+        <h5 class="text-center">活动已结束，感谢参与</h5>
     </q-banner>
     <div class="view home q-pa-sm">
-        <div class="q-ma-sm" v-for="item in sites">
-            <SiteCard :site="item"/>
-        </div>
     </div>
 </template>
 
 <script>
-import SiteCard from '@/components/SiteCard.vue'
-import data from '@/data/sites'
-import {onMounted, ref} from 'vue'
-
 export default {
     name: "HomeView",
 
-    components: {SiteCard},
-
     setup() {
-        const sites = ref([])
-
-        onMounted(() => {
-            sites.value = data
-        })
-
-        return {
-            sites
-        }
+        return {}
     }
 }
 </script>
